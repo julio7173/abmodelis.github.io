@@ -2,7 +2,7 @@ import { IconButton, InputBase, Paper } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function CustomizedInputBase() {
+export default function SearchBar() {
   return (
     <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
       <IconButton sx={{ p: '10px' }} aria-label="menu">
