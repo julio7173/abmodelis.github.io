@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -17,7 +17,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import AppsIcon from '@mui/icons-material/Apps';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
-import AddIcon from '@mui/icons-material/Add';
 import { CreateDataCurses } from '../views/teachers/createDataCurses';
 
 const drawerWidth = 240;
@@ -63,13 +62,6 @@ const handleTodoClick = () => {
 const handleArchivedClick = () => {
     // Your logic for handling the "Archivados" button click
     console.log("Archivados button clicked!");
-    // You could navigate to a different page, fetch data, etc.
-};
-
-const handleAddClick = () => {
-    // Your logic for handling the "Agregar curso" button click
-    <CreateDataCurses/>
-    console.log("Agregar curso button clicked!");
     // You could navigate to a different page, fetch data, etc.
 };
 
@@ -141,6 +133,9 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
+          <Box position="fixed" sx={{ml:"10%"}}>
+            <CreateDataCurses />
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} >
@@ -175,36 +170,9 @@ export default function MiniDrawer() {
             </ListItem>
           ))}
         </List>
-        <Divider />
-        <List>
-          {['Agregar curso'].map((text) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-                onClick={handleAddClick}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}
-                >
-                <AddIcon/>
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <CreateDataCurses/>
       </Box>
     </Box>
   );

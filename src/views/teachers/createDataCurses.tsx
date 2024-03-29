@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Container, FormControl, Grid, InputAdornment, InputLabel, MenuItem, Modal, OutlinedInput, Paper, TextField, Typography } from "@mui/material";
 import InputFileUpload from "../../components/buttons/InputFileUpload";
 import SaveButton from "../../components/buttons/SaveButton";
+import AddIcon from '@mui/icons-material/Add';
 
 const currencies = [
     {
@@ -25,16 +26,16 @@ export const CreateDataCurses: React.FC<{}> = () => {
     const handleClose = () => setOpen(false);
     return(
         <div>
-            <Button onClick={handleOpen}>Test</Button>
+            <Button onClick={handleOpen} variant="contained" endIcon={<AddIcon/>} sx={{bgcolor:"#FFFFFF", color:"#110404", "&:hover": {bgcolor: "#E6E6E6"},}}>Agregar curso</Button>
             <Modal open={open} onClose={handleClose} roboto-labelledby="modal-modal-title">
                 <Container maxWidth="sm">
                     <Grid container direction="column" alignItems="center" justifyContent="center">
                         <Grid item>
                             <Paper sx={{padding:"1.2em", borderRadius:"0.5em"}}>
                                 <Box component="form">
-                                    <Typography id="modal-modal-title" variant="h4" component="h2">Crear datos del curso</Typography>
-                                    <TextField required id="outlined-required" label="Obligatorio" defaultValue="Titulo del curso" fullWidth sx={{mt:2, mb:1.5}}/>
-                                    <TextField id="outlined-multiline-static" label="Obligatorio" multiline rows={2} defaultValue="Descripcion del curso" fullWidth sx={{mt:1.5, mb:1.5}}/>
+                                    <Typography id="modal-modal-title" variant="h6" component="h4">Crear datos del curso</Typography>
+                                    <TextField required id="outlined-required" label="Titulo del curso" fullWidth sx={{mt:2, mb:1.5}}/>
+                                    <TextField id="outlined-multiline-static-required" label="Descripcion del curso" multiline rows={2} fullWidth sx={{mt:1.5, mb:1.5}}/>
                                     <Grid container direction="row" spacing={2}>
                                         <Grid item xs={6}>
                                             <TextField id="outlined-select-currency" select label="Estado del curso" defaultValue="" fullWidth sx={{mt:1.5, mb:1.5}}>
@@ -55,9 +56,13 @@ export const CreateDataCurses: React.FC<{}> = () => {
                                     <Grid sx={{ mt:1.5, mb:1.5}}>
                                         <InputFileUpload/>
                                     </Grid>
-                                    <Grid sx={{ml:"54%"}}>
-                                        <Button>Cancelar</Button>
-                                        <SaveButton/>
+                                    <Grid container>
+                                        <Grid item sx={{ml:26}}>
+                                            <Button>Cancelar</Button>
+                                            </Grid>
+                                        <Grid item sx={{ml:2}}>
+                                            <SaveButton/>
+                                            </Grid>
                                     </Grid>
                                 </Box>
                             </Paper>
