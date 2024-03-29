@@ -1,7 +1,7 @@
 import { AppBar, Avatar, Box, Container, Grid, Toolbar } from "@mui/material";
 import React from "react";
-import { LogoNavBar } from "./LogoNavBar";
-import SearchBar from "./SearchBar";
+import { LogoNavBar } from "../LogoNavBar";
+import SearchBar from "../SearchBar";
 
 export const LoginNavBar: React.FC<{}> = () =>{
     return (
