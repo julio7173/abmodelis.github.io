@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -88,3 +88,4 @@ export default function InputFileUpload() {
     </BoxContainer>
   );
 }
+*/
