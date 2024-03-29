@@ -3,6 +3,7 @@ import { Box, Button, Container, FormControl, Grid, InputAdornment, InputLabel, 
 import InputFileUpload from "../../components/buttons/InputFileUpload";
 import SaveButton from "../../components/buttons/SaveButton";
 import AddIcon from '@mui/icons-material/Add';
+import CancelButton from "../../components/buttons/CancelButton";
 
 const currencies = [
     {
@@ -24,6 +25,7 @@ export const CreateDataCurses: React.FC<{}> = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
     return(
         <div>
             <Button onClick={handleOpen} variant="contained" endIcon={<AddIcon/>} sx={{bgcolor:"#FFFFFF", color:"#110404", "&:hover": {bgcolor: "#E6E6E6"},}}>Agregar curso</Button>
@@ -58,7 +60,7 @@ export const CreateDataCurses: React.FC<{}> = () => {
                                     </Grid>
                                     <Grid container>
                                         <Grid item sx={{ml:26}}>
-                                            <Button>Cancelar</Button>
+                                            <CancelButton/>
                                             </Grid>
                                         <Grid item sx={{ml:2}}>
                                             <SaveButton/>
