@@ -18,6 +18,7 @@ import ListItemText from '@mui/material/ListItemText';
 import AppsIcon from '@mui/icons-material/Apps';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import AddIcon from '@mui/icons-material/Add';
+import { CreateDataCurses } from '../views/teachers/createDataCurses';
 
 const drawerWidth = 240;
 
@@ -66,7 +67,8 @@ const handleArchivedClick = () => {
 };
 
 const handleAddClick = () => {
-    // Your logic for handling the "Archivados" button click
+    // Your logic for handling the "Agregar curso" button click
+    <CreateDataCurses/>
     console.log("Agregar curso button clicked!");
     // You could navigate to a different page, fetch data, etc.
 };
@@ -202,7 +204,7 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        
+        <CreateDataCurses/>
       </Box>
     </Box>
   );

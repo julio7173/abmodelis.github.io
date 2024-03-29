@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import ControlPanel from "./controlPanel";
+import { CreateDataCurses } from "./createDataCurses";
 /*
 const Teachers = () => {
   return (
@@ -15,7 +15,7 @@ const Teachers = () => {
 function Teachers(){
   return (
     <Routes>
-      <Route path="./controlPanel" element={<ControlPanel/>} />
+      <Route path="./createDataCurses" element={<CreateDataCurses/>} />
     </Routes>
   );
 };
