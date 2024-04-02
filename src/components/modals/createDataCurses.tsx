@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Button, Container, FormControl, Grid, InputAdornment, InputLabel, MenuItem, Modal, OutlinedInput, Paper, TextField, Typography } from "@mui/material";
-import InputFileUpload from "../../components/buttons/InputFileUpload";
-import SaveButton from "../../components/buttons/SaveButton";
+//import InputFileUpload from "../buttons/InputFileUpload";
+import SaveButton from "../buttons/SaveButton";
 import AddIcon from '@mui/icons-material/Add';
-import CancelButton from "../../components/buttons/CancelButton";
+import CancelButton from "../buttons/CancelButton";
 
 const currencies = [
     {
@@ -56,7 +56,7 @@ export const CreateDataCurses: React.FC<{}> = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid sx={{ mt:1.5, mb:1.5}}>
-                                        <InputFileUpload/>
+                                        
                                     </Grid>
                                     <Grid container>
                                         <Grid item sx={{ml:26}}>

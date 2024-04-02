@@ -17,7 +17,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import AppsIcon from '@mui/icons-material/Apps';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
-import { CreateDataCurses } from '../views/teachers/createDataCurses';
+import { CreateDataCurses } from './modals/createDataCurses';
 
 const drawerWidth = 240;
 
